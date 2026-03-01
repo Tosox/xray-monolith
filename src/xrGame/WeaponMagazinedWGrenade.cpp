@@ -103,6 +103,8 @@ BOOL CWeaponMagazinedWGrenade::net_Spawn(CSE_Abstract* DC)
 			count = weapon->a_elapsed_grenades.grenades_count;
 			type  = weapon->a_elapsed_grenades.grenades_type;
 		}
+        if (count > 1)
+            count = 1;
 	};
 
 	if (server_grenade_mode && IsGrenadeLauncherAttached())
